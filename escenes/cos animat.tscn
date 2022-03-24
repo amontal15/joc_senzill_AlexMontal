@@ -7,7 +7,7 @@
 
 [sub_resource type="CapsuleShape2D" id=3]
 radius = 22.5
-height = 30.0
+height = 28.0
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
@@ -30,7 +30,6 @@ animations = [ {
 [node name="cos animat" type="KinematicBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 position = Vector2( 0.5, 33.5 )
 shape = SubResource( 3 )
 

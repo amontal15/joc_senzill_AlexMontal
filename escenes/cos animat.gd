@@ -14,15 +14,15 @@ var  njump = 2
 func _physics_process(delta):
 	velocitat += gravetat * delta
 	velocitat.x = 0
-	if Input.is_action_pressed("Mou dreta"):
+	if Input.is_action_pressed("dreta_1"):
 		velocitat += Vector2.RIGHT * velocitat_base
 		
-	if Input.is_action_pressed("mou esquerra"):
+	if Input.is_action_pressed("esquerra_1"):
 		velocitat += Vector2.LEFT * velocitat_base	
 	
 	if is_on_floor():
 		njump=99
-	if Input.is_action_just_pressed("mou a dalt ") and njump>0:
+	if Input.is_action_just_pressed("salta_1") and njump>0:
 		velocitat.y = velocitat_salt
 		njump += -1
 	velocitat = move_and_slide(velocitat, Vector2.UP)
