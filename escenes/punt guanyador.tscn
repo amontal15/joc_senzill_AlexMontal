@@ -1,18 +1,16 @@
 [gd_scene load_steps=2 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7.875, 58.5 )
+extents = Vector2( 68, 59.5 )
 
-[node name="red_volley" type="StaticBody2D"]
-position = Vector2( 511, -39 )
+[node name="Area2D" type="Area2D"]
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -98.0
-margin_top = -20.0
-margin_right = -82.0
-margin_bottom = 97.0
+margin_right = 136.0
+margin_bottom = 119.0
+color = Color( 0, 1, 0, 0.619608 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
-position = Vector2( -89.875, 38.5 )
+position = Vector2( 68, 59.5 )
 shape = SubResource( 1 )
