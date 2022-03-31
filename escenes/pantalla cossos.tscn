@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://escenes/Terra_escales.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenes/terra.tscn" type="PackedScene" id=2]
@@ -6,8 +6,6 @@
 [ext_resource path="res://escenes/rigid body_ cos2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://escenes/rigid body_ cos2.gd" type="Script" id=5]
 [ext_resource path="res://escenes/cos animat.tscn" type="PackedScene" id=6]
-[ext_resource path="res://escenes/Area_punt.tscn" type="PackedScene" id=7]
-[ext_resource path="res://escenes/Area_punt_2.tscn" type="PackedScene" id=8]
 
 [node name="pantalla cossos" type="Node2D"]
 
@@ -19,7 +17,7 @@ position = Vector2( 603, 300 )
 scale = Vector2( 1, 2 )
 
 [node name="RigidBody2D" parent="." instance=ExtResource( 4 )]
-position = Vector2( 513, 206 )
+position = Vector2( 308, 75 )
 script = ExtResource( 5 )
 
 [node name="StaticBody2D" parent="." instance=ExtResource( 3 )]
@@ -33,20 +31,10 @@ position = Vector2( 1075, -47 )
 rotation = 1.5708
 scale = Vector2( 1, 1.87 )
 
-[node name="Area2D2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 380, 470 )
-
-[node name="Area2D" parent="." instance=ExtResource( 7 )]
-position = Vector2( 633, 458 )
-scale = Vector2( 0.5, 1 )
-
 [node name="cos animat" parent="." instance=ExtResource( 6 )]
-position = Vector2( 796, 419 )
+position = Vector2( 794, 424 )
 
 [node name="cos animat2" parent="." instance=ExtResource( 6 )]
 modulate = Color( 0.427451, 0.627451, 0.611765, 1 )
-position = Vector2( 235, 415 )
+position = Vector2( 233, 418 )
 jugador = 2
-
-[connection signal="body_entered" from="Area2D2" to="RigidBody2D" method="_on_Area2D2_body_entered"]
-[connection signal="body_entered" from="Area2D" to="RigidBody2D" method="_on_Area2D_body_entered"]
